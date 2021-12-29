@@ -40,14 +40,16 @@ function addList(){
     cloned_list_item.style.color = 'black';
     cloned_list_item.setAttribute('id',`${Date.now()}`);
     cloned_list_item.setAttribute('value',`${Date.now()}`);
+    cloned_list_item.setAttribute('style',"margin-left: 10px; color:black;");
     done_button = document.createElement('button');
     done_button.setAttribute('id',`check-done-${Date.now()}`);
     done_button.setAttribute('class','mark-as-done-class');
     done_button.setAttribute('value',`${Date.now()}`);
+    done_button.setAttribute('onclick','completedTask(this.value)');
 
     // done_button.setAttribute('style','backgrond-color')
     done_button.innerText = ' mark as done';
-    done_button.setAttribute('style','font-size:10px; background-color:blue;')
+    done_button.setAttribute('style','font-size:15 px; background-color: lightblue; height:15px; margin-left:10px; border-radius:5px')
     console.log(done_button);
     cloned_list_item.appendChild(done_button);
     console.log(cloned_list_item);
@@ -110,12 +112,13 @@ function createCard(){
     display(first_card);
 }};
 function completedTask(value){
-    temp = document.getElementById(`${value}`).innerText;
+    //temp = document.getElementById(`${value}`).innerText;
     document.getElementById(`${value}`).style.textDecoration = 'line-through';
     document.getElementById(`${value}`).style.color = 'red';
+    //document.removeChild(`check-done-${value}`);
     document.getElementById(`check-done-${value}`).innerHTML = '';
-    // document.getElementById(`${value}`).innerHTML = `<del>${temp}</del>`;
-    console.log(document.getElementById(`${value}`))
+    // // document.getElementById(`${value}`).innerHTML = `<del>${temp}</del>`;
+    // console.log(document.getElementById(`${value}`))
     //document.getElementById(`${abc}`).innerHTML =
     console.log(value);
 }
