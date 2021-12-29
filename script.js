@@ -42,10 +42,12 @@ function addList(){
     cloned_list_item.setAttribute('value',`${Date.now()}`);
     done_button = document.createElement('button');
     done_button.setAttribute('id',`check-done-${Date.now()}`);
+    done_button.setAttribute('class','mark-as-done-class');
     done_button.setAttribute('value',`${Date.now()}`);
+
     // done_button.setAttribute('style','backgrond-color')
     done_button.innerText = ' mark as done';
-    done_button.style.backgroundColor = 'grey';
+    done_button.setAttribute('style','font-size:10px; background-color:blue;')
     console.log(done_button);
     cloned_list_item.appendChild(done_button);
     console.log(cloned_list_item);
