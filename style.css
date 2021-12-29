@@ -111,8 +111,6 @@ button{
 }
 .buttons-in-card{
     display: flex;
-    margin-top: 40%;
-    margin-left: 60%;
     font-size: 30px;
 }
 .add-button-in-card{
@@ -120,12 +118,12 @@ button{
     /* bottom: 5%;
     right: 5%;  */
     position: absolute;
-    bottom: 0px;
+    bottom: 10px;
     font-size: 25px;
     margin-left: 15%;
-    margin-bottom: 15%;
+    right: 10px;
     cursor: pointer;
-    color: #8B9A46;
+    color: #557C55;
     background-color: #fff;
 }
 .delete-button-in-card{
@@ -134,11 +132,11 @@ button{
     right: 30%;  */
     /* margin-top: 120%; */
     position: absolute;
-    bottom: 0px;
+    right: 50px;
+    bottom: 10px;
     font-size: 25px;
-    margin-bottom: 15%;
     cursor: pointer;
-    color: #EA5C2B;
+    color: #F14A16;
 }
 .in-list-button{
     cursor: pointer;
