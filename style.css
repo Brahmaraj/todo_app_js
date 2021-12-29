@@ -83,6 +83,7 @@ button{
     display: none;
     /* position: relative;  */
     /* flex-direction: column; */
+    position: relative;
     min-height: 300px;
     min-width: 13%;
     text-align: center;
@@ -112,6 +113,8 @@ button{
     /* position: relative; */
     /* bottom: 5%;
     right: 5%;  */
+    position: absolute;
+    bottom: 0px;
     font-size: 25px;
     margin-left: 15%;
     margin-bottom: 15%;
@@ -121,6 +124,9 @@ button{
     /* position: absolute;
     bottom: 5%;
     right: 30%;  */
+    /* margin-top: 120%; */
+    position: absolute;
+    bottom: 0px;
     font-size: 25px;
     margin-bottom: 15%;
     cursor: pointer;
