@@ -88,7 +88,7 @@ button{
     /* position: relative;  */
     /* flex-direction: column; */
     position: relative;
-    min-height: 300px;
+    min-height: 350px;
     min-width: 13%;
     text-align: center;
     border-radius: 10px;
@@ -100,9 +100,11 @@ button{
     /* border: 1px solid white; */
 }
 .card-head{
+    padding-left: 10px;
+    padding-right: 10px;
     font-size: 30px;
     font-weight: 700;
-    color: rgb(79, 184, 219);
+    color: #676FA3;
 }
 .list-element{
     margin-top: 10%;
@@ -123,7 +125,7 @@ button{
     margin-left: 15%;
     margin-bottom: 15%;
     cursor: pointer;
-    color: #95CD41;
+    color: #8B9A46;
     background-color: #fff;
 }
 .delete-button-in-card{

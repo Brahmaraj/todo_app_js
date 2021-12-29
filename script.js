@@ -49,7 +49,7 @@ function addList(){
 
     // done_button.setAttribute('style','backgrond-color')
     done_button.innerText = ' mark as done';
-    done_button.setAttribute('style','font-size:15 px; background-color: lightblue; height:15px; margin-left:10px; border-radius:5px')
+    done_button.setAttribute('style','font-size:15 px; background-color: lightblue; height:15px; margin-left:10px; border-radius:5px;')
     console.log(done_button);
     cloned_list_item.appendChild(done_button);
     console.log(cloned_list_item);
