@@ -18,7 +18,7 @@ body{
     cursor: pointer;
 }
 .color-blue{
-    color: rgb(86, 188, 223);
+    color: #6998AB;
 }
 #modal-div{
     display: none;
@@ -28,13 +28,13 @@ body{
     z-index: 1;
     color: white;
     background-color: rgba(0, 0, 0, 0.8);
-    width: 55%;
-    height: 50%;
+    width: 70%;
+    height: 67.7%;
 }
 #modal-box{
     border-radius: 7px;
-    width: 60%;
-    height: 65%;
+    width: 40%;
+    height: 40%;
     padding: 10px 0 0 0px;
     text-align: center;
     color: black;
@@ -42,14 +42,14 @@ body{
 
 }
 .big-blue-text{
-    color: rgb(100, 196, 228);
+    color: #04293A;
     font-size: 50px;
 }
 .blue-button{
     border-radius: 250px;
     margin-top: 5%;
     color: white;
-    background-color: rgb(82, 180, 212);
+    background-color: #406882;
     font-size: 30px;
     width: 25%;
     height: 20%;
@@ -134,17 +134,18 @@ button{
     display: none;
     position: absolute;
     padding: 20% 0 0 30%;
+    text-align: center;
     top: -10%;
     z-index: 1;
     color: white;
     background-color: rgba(0, 0, 0, 0.8);
-    width: 55%;
-    height: 50%;
+    width: 70%;
+    height: 67.7%;
 }
 #modal-box-card{
     border-radius: 7px;
-    width: 60%;
-    height: 65%;
+    width: 40%;
+    height: 40%;
     padding: 10px 0 0 0px;
     text-align: center;
     color: black;
@@ -179,10 +180,9 @@ button{
     cursor: pointer;
 }
 #card-dynamic-head{
-    position: absolute;
-    top: 10%;
-    left: 42%;
-    font-size: 50px;
-    color: #FFE6BC;
+    justify-content: center;
+    font-size: 55px;
+    font-weight: 700;
+    color: #6998AB;
     display: none;
 }

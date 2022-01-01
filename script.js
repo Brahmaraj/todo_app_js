@@ -174,7 +174,7 @@ function headerFunc(val){
             }
     };
     document.getElementById('card-dynamic-head').innerText = `${card_header}`;
-    document.getElementById('card-dynamic-head').style.display = 'block'
+    document.getElementById('card-dynamic-head').style.display = 'flex'
     document.getElementById('back-button').style.display = 'block'
 };
 
