@@ -3,7 +3,7 @@
     padding: 0;
 }
 body{
-    background: black;
+    background: #04293A;
     color: white;
 }
 #header{
@@ -14,7 +14,7 @@ body{
 #add-button{
     z-index: 1;
     position: absolute;
-    left: 70%;
+    left: 80%;
     cursor: pointer;
 }
 .color-blue{
@@ -91,13 +91,15 @@ button{
     margin: 5% 0 0 10%;
     padding: 10px 0 0 0;
     background: white;
+    border: 1px solid 064663;
+    box-shadow: 4px -4px 20px black;
 }
 .card-head{
     padding-left: 10px;
     padding-right: 10px;
     font-size: 30px;
     font-weight: 700;
-    color: #676FA3;
+    color: #064663;
     cursor: pointer;
 }
 .list-element{
@@ -150,8 +152,9 @@ button{
 
 }
 .this-list-element{
-    font-size: x-large;
+    font-size: 20px;
     font-weight: 700;
+    color: cadetblue;
     cursor: pointer;
 }
 #check-done{
@@ -178,8 +181,8 @@ button{
 #card-dynamic-head{
     position: absolute;
     top: 10%;
-    left: 40%;
+    left: 42%;
     font-size: 50px;
-    color: rgb(82, 180, 212);
+    color: #FFE6BC;
     display: none;
 }
