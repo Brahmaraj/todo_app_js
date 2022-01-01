@@ -25,7 +25,6 @@ body{
     top: -10%;
     z-index: 1;
     color: white;
-    /* filter: blur(10px); */
     background-color: rgba(0, 0, 0, 0.8);
     width: 55%;
     height: 50%;
@@ -70,34 +69,26 @@ button{
     font-size: 30px;
 }
 #outer-container{
-    /* overflow: auto; */
     display: flex;
     position: relative;
     flex-wrap: wrap;
     align-items: flex-start;
     flex-direction: row;
     justify-content: space-around;
-    /* flex-grow: 20px; */
     margin-right: 10%;
     width: 90%;
-    /* min-height: 600px; */
 }
 .card{
     list-style: none;
     display: none;
-    /* position: relative;  */
-    /* flex-direction: column; */
     position: relative;
     min-height: 350px;
-    min-width: 13%;
+    min-width: 15%;
     text-align: center;
     border-radius: 10px;
     margin: 5% 0 0 10%;
-    /* width: 13%; */
-    /* height: 300px;  */
     padding: 10px 0 0 0;
     background: white;
-    /* border: 1px solid white; */
 }
 .card-head{
     padding-left: 10px;
@@ -105,6 +96,7 @@ button{
     font-size: 30px;
     font-weight: 700;
     color: #676FA3;
+    cursor: pointer;
 }
 .list-element{
     margin-top: 10%;
@@ -114,9 +106,6 @@ button{
     font-size: 30px;
 }
 .add-button-in-card{
-    /* position: relative; */
-    /* bottom: 5%;
-    right: 5%;  */
     position: absolute;
     bottom: 10px;
     font-size: 25px;
@@ -127,10 +116,6 @@ button{
     background-color: #fff;
 }
 .delete-button-in-card{
-    /* position: absolute;
-    bottom: 5%;
-    right: 30%;  */
-    /* margin-top: 120%; */
     position: absolute;
     right: 50px;
     bottom: 10px;
@@ -148,7 +133,6 @@ button{
     top: -10%;
     z-index: 1;
     color: white;
-    /* filter: blur(10px); */
     background-color: rgba(0, 0, 0, 0.8);
     width: 55%;
     height: 50%;
@@ -176,4 +160,15 @@ button{
 .mark-as-done-class{
     background-color: lightblue;
     font-size: 10px;
+}
+#back-button{
+    position: absolute;
+   font-size: 40px;
+   top: 10%;
+   left: 10%;
+   display: none;
+}
+#back-icon{
+    font-size: 40px;   
+    color: indianred;
 }

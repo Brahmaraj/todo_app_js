@@ -14,6 +14,7 @@ function modal(){
 function addCard(){
     card_title = document.getElementById("modal-input-box").value;
     createObj(card_title);
+    closeModal();
 }
 function closeModal(){
     document.getElementById("modal-div").style.display = "none";
@@ -46,6 +47,7 @@ function addList(){
     done_button.setAttribute('class','mark-as-done-class');
     done_button.setAttribute('value',`${Date.now()}`);
     done_button.setAttribute('onclick','completedTask(this.value)');
+   // 
 
     // done_button.setAttribute('style','backgrond-color')
     done_button.innerText = ' mark as done';
@@ -75,6 +77,7 @@ function addList(){
     document.getElementById(`${value_id}`).getElementsByClassName('add-list-after-this')[0].appendChild(cloned_list_item).appendChild(done_button);
     //document.getElementById(`${value_id}`).insertBefore(cloned_list_item, )
     cloned_list_item = '';
+    closeCardModal();
 }
 
 function closeCardModal(){
@@ -130,6 +133,7 @@ function display(card){
     arr_of_obj.forEach(element => {
         card.id = element.id;
         card.querySelector(".card-head").innerHTML = element.title;
+        card.querySelector(".card-head").setAttribute('value',`${element.id}`);
         card.setAttribute("value",`${element.id}`);
         card.setAttribute("display","block");
         card.setAttribute("min-height","300px");
@@ -141,5 +145,41 @@ function display(card){
     });
     card.style.display = "block";
     document.getElementById("outer-container").appendChild(card);
+    displayAll();
 }}
 
+function headerFunc(val){
+    var card_header;
+    console.log(val);
+    console.log(document.getElementById(`${val}`));
+    console.log(arr_of_obj);
+    for(let ele of arr_of_obj){
+        for(let id in ele){
+            if(ele[id]==val){
+                card_header = ele.title;
+                break;
+            };
+        };
+    };
+    console.log(card_header);
+    document.querySelector("#app-name").style.display = 'none';
+    document.querySelector("#add-button-text").style.display = 'none';
+    for(let ele of arr_of_obj){
+        console.log(ele.id);
+            if(ele.id==val){
+                document.getElementById(`${ele.id}`).style.display = 'block';
+            }
+            else {
+                document.getElementById(`${ele.id}`).style.display = 'none';
+            }
+    };
+    document.getElementById('back-button').style.display = 'block'
+}
+function displayAll(){
+    document.querySelector("#app-name").style.display = 'block';
+    document.querySelector("#add-button-text").style.display = 'inline-block';
+    document.getElementById('back-button').style.display = 'none';
+    for(let ele of arr_of_obj){
+            document.getElementById(`${ele.id}`).style.display = 'block';
+    };
+}

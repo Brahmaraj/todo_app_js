@@ -15,8 +15,12 @@
         </div>
         <div id="add-button" onclick="modal()">
             <i class="fas fa-plus-circle color-blue"></i>
-            Add Item 
+            <span id="add-button-text">Add Item</span>
         </div>
+    </div>
+    <div id="back-button">
+        <i id="back-icon" class="fas fa-arrow-circle-left" onclick="displayAll()"></i>
+        Go back
     </div>
     <div id="modal-div">
         <div id="modal-box">
@@ -40,8 +44,8 @@
     <div id="outer-container">
         <div class="card">
             <div class="wrap-cont">
-            <span class="card-head">Try</span>
-            <br><br><hr><div class="add-list-after-this"></div>
+            <option class="card-head" onclick="headerFunc(this.value)">Try</option>
+            <br><hr><div class="add-list-after-this"></div>
             <br>
             <!-- <li class="list-element">First Item <button class="in-list-button" value="" onclick="completedTask(this)">mark as done</button></li>
             <li class="list-element">Second Item <button class="in-list-button" value="" onclick="completedTask(this)">mark as done</button></li> -->
@@ -53,5 +57,9 @@
         </div>
     </div>
     <script src="script.js"></script>
+    <script>
+        arr = [1,2,3,2];
+        console.log((arr.filter(n => n==2)).length);
+    </script>
 </body>
 </html>
