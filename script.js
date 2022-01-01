@@ -173,8 +173,12 @@ function headerFunc(val){
                 document.getElementById(`${ele.id}`).style.display = 'none';
             }
     };
+    document.getElementById('card-dynamic-head').innerText = `${card_header}`;
+    document.getElementById('card-dynamic-head').style.display = 'block'
     document.getElementById('back-button').style.display = 'block'
-}
+};
+
+
 function displayAll(){
     document.querySelector("#app-name").style.display = 'block';
     document.querySelector("#add-button-text").style.display = 'inline-block';
@@ -182,4 +186,6 @@ function displayAll(){
     for(let ele of arr_of_obj){
             document.getElementById(`${ele.id}`).style.display = 'block';
     };
+    document.getElementById('card-dynamic-head').innerText = ``;
+    document.getElementById('card-dynamic-head').style.display = 'none';
 }

@@ -12,7 +12,9 @@ body{
     margin: 5% 0 0 10%;
 }
 #add-button{
-    margin-left: 45%;
+    z-index: 1;
+    position: absolute;
+    left: 70%;
     cursor: pointer;
 }
 .color-blue{
@@ -162,13 +164,22 @@ button{
     font-size: 10px;
 }
 #back-button{
-    position: absolute;
+   /* position: absolute; */
+    margin-left: 10%;
    font-size: 40px;
-   top: 10%;
-   left: 10%;
    display: none;
 }
 #back-icon{
+    z-index: 20;
     font-size: 40px;   
-    color: indianred;
+    color: #F14A16;
+    cursor: pointer;
+}
+#card-dynamic-head{
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    font-size: 50px;
+    color: rgb(82, 180, 212);
+    display: none;
 }
