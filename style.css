@@ -3,7 +3,7 @@
     padding: 0;
 }
 body{
-    background: #04293A;
+    background: #222831;
     color: white;
 }
 #header{
@@ -18,23 +18,23 @@ body{
     cursor: pointer;
 }
 .color-blue{
-    color: #6998AB;
+    color: #00ADB5;
 }
 #modal-div{
     display: none;
-    position: absolute;
+    position: fixed;
     padding: 20% 0 0 30%;
     top: -10%;
     z-index: 1;
     color: white;
     background-color: rgba(0, 0, 0, 0.8);
-    width: 70%;
-    height: 67.7%;
+    width: 100vw;
+    height: 100vh;
 }
 #modal-box{
     border-radius: 7px;
-    width: 40%;
-    height: 40%;
+    width: 30vw;
+    height: 30vh;
     padding: 10px 0 0 0px;
     text-align: center;
     color: black;
@@ -49,7 +49,7 @@ body{
     border-radius: 250px;
     margin-top: 5%;
     color: white;
-    background-color: #406882;
+    background-color: #00ADB5;
     font-size: 30px;
     width: 25%;
     height: 20%;
@@ -90,20 +90,20 @@ button{
     border-radius: 10px;
     margin: 5% 0 0 10%;
     padding: 10px 0 0 0;
-    background: white;
-    border: 1px solid 064663;
-    box-shadow: 4px -4px 20px black;
+    background: #EEEEEE;
+    box-shadow: 0px 0px 20px #00ADB5;
 }
 .card-head{
     padding-left: 10px;
     padding-right: 10px;
     font-size: 30px;
     font-weight: 700;
-    color: #064663;
+    color: #393E46;
     cursor: pointer;
 }
 .list-element{
     margin-top: 10%;
+    margin-bottom: 10%;
 }
 .buttons-in-card{
     display: flex;
@@ -116,8 +116,8 @@ button{
     margin-left: 15%;
     right: 10px;
     cursor: pointer;
-    color: #557C55;
-    background-color: #fff;
+    color: #393E46;
+    background-color: #EEEEEE;
 }
 .delete-button-in-card{
     position: absolute;
@@ -125,27 +125,28 @@ button{
     bottom: 10px;
     font-size: 25px;
     cursor: pointer;
-    color: #F14A16;
+    color: #393E46;
+    background-color: #EEEEEE;
 }
 .in-list-button{
     cursor: pointer;
 }
 #modal-div-card{
     display: none;
-    position: absolute;
+    position: fixed;
     padding: 20% 0 0 30%;
     text-align: center;
     top: -10%;
     z-index: 1;
     color: white;
     background-color: rgba(0, 0, 0, 0.8);
-    width: 70%;
-    height: 67.7%;
+    width: 100vw;
+    height: 100vh;
 }
 #modal-box-card{
     border-radius: 7px;
-    width: 40%;
-    height: 40%;
+    width: 30vw;
+    height: 30vh;
     padding: 10px 0 0 0px;
     text-align: center;
     color: black;
@@ -155,8 +156,7 @@ button{
 .this-list-element{
     font-size: 20px;
     font-weight: 700;
-    color: cadetblue;
-    cursor: pointer;
+    color: #393E46;
 }
 #check-done{
     color: black;
@@ -164,8 +164,12 @@ button{
     display: none;
 }
 .mark-as-done-class{
-    background-color: lightblue;
+    background-color: #393E46;
+    color: #EEEEEE;
     font-size: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0px 10px 10px 10px;
 }
 #back-button{
    /* position: absolute; */
@@ -176,13 +180,13 @@ button{
 #back-icon{
     z-index: 20;
     font-size: 40px;   
-    color: #F14A16;
+    color: #00ADB5;
     cursor: pointer;
 }
 #card-dynamic-head{
     justify-content: center;
     font-size: 55px;
     font-weight: 700;
-    color: #6998AB;
+    color: #00ADB5;
     display: none;
 }

@@ -38,10 +38,9 @@ function addList(){
     console.log(cloned_list_item);
     cloned_list_item.innerText =  card_item; //card_item +
     cloned_list_item.style.display = "block";
-    cloned_list_item.style.color = 'black';
     cloned_list_item.setAttribute('id',`${Date.now()}`);
     cloned_list_item.setAttribute('value',`${Date.now()}`);
-    cloned_list_item.setAttribute('style',"margin-left: 10px; color:black;");
+    cloned_list_item.setAttribute('style',"margin-left: 10px;");
     done_button = document.createElement('button');
     done_button.setAttribute('id',`check-done-${Date.now()}`);
     done_button.setAttribute('class','mark-as-done-class');
@@ -51,7 +50,7 @@ function addList(){
 
     // done_button.setAttribute('style','backgrond-color')
     done_button.innerText = ' mark as done';
-    done_button.setAttribute('style','font-size:15 px; background-color: lightblue; height:15px; margin-left:10px; border-radius:5px;')
+    done_button.setAttribute('style','font-size:15 px;cursor:pointer; height:15px; border-radius:5px;')
     console.log(done_button);
     cloned_list_item.appendChild(done_button);
     console.log(cloned_list_item);
@@ -117,9 +116,10 @@ function createCard(){
 function completedTask(value){
     //temp = document.getElementById(`${value}`).innerText;
     document.getElementById(`${value}`).style.textDecoration = 'line-through';
-    document.getElementById(`${value}`).style.color = 'red';
+    document.getElementById(`${value}`).style.color = '#112D4E';
     //document.removeChild(`check-done-${value}`);
-    document.getElementById(`check-done-${value}`).innerHTML = '';
+    document.getElementById(`check-done-${value}`).remove();
+    //document.getElementById(`check-done-${value}`).innerHTML = '';
     // // document.getElementById(`${value}`).innerHTML = `<del>${temp}</del>`;
     // console.log(document.getElementById(`${value}`))
     //document.getElementById(`${abc}`).innerHTML =
