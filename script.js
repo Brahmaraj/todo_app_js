@@ -3,7 +3,6 @@ var card_title;
 var card_item;
 var first_card;
 var delete_div;
-var cloned_list_item;
 var value_id;
 var done_button;
 var title_for_list;
@@ -42,9 +41,9 @@ function createObj(title){
 //triggers when clicked on plus icon inside card
 //and pops a modal and that modal provides the input
 function addList(){
-    cloned_list_item = document.querySelector(".this-list-element").cloneNode(true);
+    var cloned_list_item = document.querySelector(".this-list-element").cloneNode(true);
     card_item = document.getElementById('modal-input-box-card').value;
-    //console.log(cloned_list_item);
+    console.log(value_id);
     cloned_list_item.innerText =  card_item; 
     cloned_list_item.style.display = "block";
     cloned_list_item.setAttribute('id',`${Date.now()}`);
@@ -77,7 +76,6 @@ function addList(){
     //console.log(cloned_list_item);
     //console.log(arr_of_obj);
     document.getElementById(`${value_id}`).getElementsByClassName('add-list-after-this')[0].appendChild(cloned_list_item).appendChild(done_button);
-    cloned_list_item = '';
     closeCardModal();
 }
 
@@ -155,8 +153,7 @@ function display(card){
         card.querySelector(".delete-button-in-card").setAttribute("value",`${element.id}`);
         card.querySelector(".delete-button-in-card").setAttribute("onClick","deleteCard(this.value)");
         card.querySelector(".add-button-in-card").setAttribute("value",`${element.id}`);
-        card.querySelector(".add-button-in-card").setAttribute("onClick","addSubtask(this.value)");
-        
+        card.querySelector(".add-button-in-card").setAttribute("onClick","addSubtask(this.value)");    
     });
     if(title_flag)
     card.style.display = 'none';
