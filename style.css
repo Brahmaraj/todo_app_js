@@ -39,7 +39,7 @@ body{
     text-align: center;
     color: black;
     background-color: #fff;
-
+    animation: modalPop 0.2s ease-in 0s 1;
 }
 .big-blue-text{
     color: #04293A;
@@ -92,6 +92,7 @@ button{
     padding: 10px 0 0 0;
     background: #EEEEEE;
     box-shadow: 0px 0px 20px #00ADB5;
+    animation: cardAnimate 0.2s ease-in 0s 1;
 }
 .card-head{
     padding-left: 10px;
@@ -151,12 +152,13 @@ button{
     text-align: center;
     color: black;
     background-color: #fff;
-
+    animation: modalPop 0.2s ease-in 0s 1;
 }
 .this-list-element{
     font-size: 20px;
     font-weight: 700;
     color: #393E46;
+    animation: cardTextAnimate 0.2s ease-in 0s 1;
 }
 #check-done{
     color: black;
@@ -189,4 +191,20 @@ button{
     font-weight: 700;
     color: #00ADB5;
     display: none;
+}
+
+@keyframes modalPop {
+    0% { transform: scale(0); };
+    50% { transform: scale(0.5); };
+    100% { transform: scale(1); };
+}
+
+@keyframes cardAnimate {
+    0% { transform: scaleX(0); };
+    100% { transform: scaleX(1) };
+}
+
+@keyframes cardTextAnimate {
+    0% { transform: scaleY(0); };
+    100% { transform: scaleY(1) };
 }
