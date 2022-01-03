@@ -1,12 +1,5 @@
 var arr_of_obj = new Set();
-var card_title;
-var card_item;
-var first_card;
-var delete_div;
 var value_id;
-var done_button;
-var title_for_list;
-var temp;
 var title_flag = false;
 var subtask = new Map;
 //main modal when enabled when clicked on add item
@@ -16,7 +9,7 @@ function modal(){
 
 //calls create object function with provided input when clicked on 'add' button on modal nad closes modal
 function addCard(){
-    card_title = document.getElementById("modal-input-box").value;
+    var card_title = document.getElementById("modal-input-box").value;
     createObj(card_title);
     closeModal();
 }
@@ -28,6 +21,7 @@ function closeModal(){
 
 //creates a object which stores the info about card and calls create a create card function
 function createObj(title){
+    document.getElementById('empty-list').style.display = 'none'
     var card_obj = {
         title: title,
         id: Date.now(),
@@ -42,14 +36,14 @@ function createObj(title){
 //and pops a modal and that modal provides the input
 function addList(){
     var cloned_list_item = document.querySelector(".this-list-element").cloneNode(true);
-    card_item = document.getElementById('modal-input-box-card').value;
+    var card_item = document.getElementById('modal-input-box-card').value;
     console.log(value_id);
     cloned_list_item.innerText =  card_item; 
     cloned_list_item.style.display = "block";
     cloned_list_item.setAttribute('id',`${Date.now()}`);
     cloned_list_item.setAttribute('value',`${Date.now()}`);
     cloned_list_item.setAttribute('style',"margin-left: 10px;");
-    done_button = document.createElement('button');
+    var done_button = document.createElement('button');
     done_button.setAttribute('id',`check-done-${Date.now()}`);
     done_button.setAttribute('class','mark-as-done-class');
     done_button.setAttribute('value',`${Date.now()}`);
@@ -66,7 +60,6 @@ function addList(){
         for(prop in obj){
             if(obj.id == value_id){
                 obj.subtask.set(`${card_item}`,`${Date.now()}`);
-                card_item = '';
                 break;
             }
         }
@@ -99,7 +92,7 @@ function addSubtask(val) {
 //the value is taken as paramater (i.e which is id for that specific card ) and
 //deletes that from our set of objects as well as from the main container
 function deleteCard(val){
-    delete_div = document.getElementById(`${val}`);
+    var delete_div = document.getElementById(`${val}`);
     //console.log(val);
     for(obj of arr_of_obj){
         for(prop in obj){
@@ -109,7 +102,10 @@ function deleteCard(val){
         }
     }
     delete_div.parentNode.removeChild(delete_div);
-    first_card = 0;
+    if(arr_of_obj.size==0){
+        document.getElementById('empty-list').style.display = 'block';
+    }
+    
     //console.log(arr_of_obj);
 };
 
@@ -117,14 +113,9 @@ function deleteCard(val){
 //so takes the details from the object and creates the card according to user
 //clones the template node and then calls display function which will actually create card on main conatiner
 function createCard(){
-    if(arr_of_obj.size==0){
-    document.getElementById('outer-container').innerHTML = "EMPTY";
-    first_card = 0;
-    }
-    else {
-    first_card = document.querySelector('.card').cloneNode(true);
+    var first_card = document.querySelector('.card').cloneNode(true);
     display(first_card);
-}};
+};
 
 //function below is attached to mark as done button and takes value as the paramter
 //and then as the same value is attached to text as id it finds that element and 
@@ -139,10 +130,7 @@ function completedTask(value){
 //function below creates the card on main container
 //traverses through the set of objects and creates the card
 function display(card){
-    if(card==0){
-        document.getElementById('outer-container').innerHTML = "EMPTY";
-    }
-    else {
+    document.getElementById('empty-list').style.display = 'none'
     arr_of_obj.forEach(element => {
         card.id = element.id;
         card.querySelector(".card-head").innerHTML = element.title;
@@ -160,7 +148,7 @@ function display(card){
     else
     card.style.display = "block";
     document.getElementById("outer-container").appendChild(card);
-}}
+}
 
 //when someone click on the head of card this function is triggered
 //it changes all the display to none and just makes the selected card as block

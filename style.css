@@ -193,8 +193,13 @@ button{
     display: none;
 }
 
-#outer-container{
-    color: #fff;
+#empty-list{
+    position: relative;
+    top: 10vh;
+    margin-left: 30vw;
+    color: #00ADB5;
+    font-size: 70px;
+    font-weight: 800;
 }
 
 @keyframes modalPop {
