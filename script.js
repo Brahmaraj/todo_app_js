@@ -124,7 +124,7 @@ function completedTask(value){
     document.getElementById(`${value}`).style.textDecoration = 'line-through';
     document.getElementById(`${value}`).style.color = '#112D4E';
     document.getElementById(`check-done-${value}`).remove();
-    //console.log(value);
+    console.log(value);
 }
 
 //function below creates the card on main container
