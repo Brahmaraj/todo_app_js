@@ -237,5 +237,27 @@ button{
 }
 
 @media screen and (max-width: 450px){
-
+#modal-div{
+    padding:60% 0 0 15%;
+}
+#modal-box{
+    height: 64vh;
+}
+.input-box{
+    height: 15%;
+}
+.modal-content{
+    margin-top: 3%;
+}
+.blue-button{
+    width: 80%;
+    height: 15%;
+}
+#modal-close-button{
+    margin-left: 0px;
+}
+#modal-box-card{
+    height: 64vh;
+    margin: 20% 0 0 0;
+}
 }
